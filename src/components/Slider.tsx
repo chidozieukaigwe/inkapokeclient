@@ -6,12 +6,12 @@ export default function Slider() {
 
   const [currentSlide, setCurrentSlide] = useState(0)
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentSlide((prev) => (prev === data.length - 1? 0 : prev + 1));
-  //   }, 4000);
-  //   return () => clearInterval(interval);
-  // })
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev === data.length - 1? 0 : prev + 1));
+    }, 4000);
+    return () => clearInterval(interval);
+  })
 
   const data = [
     {
@@ -22,7 +22,7 @@ export default function Slider() {
     {
       id: 1,
       title: "always freshly made and served with love",
-      image: "/slide2.jpg"
+      image: "/slide1.jpg"
     },
     {
       id: 1,

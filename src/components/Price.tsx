@@ -7,7 +7,7 @@ type Props = {
     options?: {title:string, additionalPrice: number}[]
 }
 
-export default function Price({price, id, options}: Props) {
+export default function Price({price, options}: Props) {
 
     const [total, setTotal] = useState(price)
     const [quantity, setQuantity] = useState(1)
